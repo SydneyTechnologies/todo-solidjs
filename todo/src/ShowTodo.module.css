@@ -1,0 +1,26 @@
+.container{
+    max-height: 400px;
+    max-width: 400px;
+    background-color: #FFFFFF;
+    box-shadow: 15px 10px 20px rgb(197, 196, 196);
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.tab{
+    flex: 1;
+    background-color: #682EE4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.tabHolder{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
