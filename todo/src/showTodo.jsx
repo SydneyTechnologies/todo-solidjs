@@ -1,5 +1,6 @@
 import styles from './ShowTodo.module.css';
-import {createSignal, createEffect} from 'solid-js';
+import {createSignal, createEffect, For} from 'solid-js';
+import todo from './store';
 
 function ShowTodo(){
 
@@ -8,8 +9,9 @@ function ShowTodo(){
         // 0 means the Todos application is active
         // 1 means that the completed section is active
     createEffect(()=>{
-        console.log(active())
+        console.log(active());
     });
+
 
     return (
         <div class={styles.container}>
@@ -20,9 +22,14 @@ function ShowTodo(){
                 <button class={active()===1?styles.tab:styles.button} onClick={()=>setActive(1)}>Completed</button>
             </div>
 
-            <div >
-                There are currently no todos present at this time
-            </div>
+            <For each={todo()}>{
+                (todo)=><div >
+                {todo.title}
+                </div>
+            }
+                
+            </For>
+            
         </div>
     );
 }
