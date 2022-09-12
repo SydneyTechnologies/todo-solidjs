@@ -1,0 +1,39 @@
+.todo{
+    padding: 0px;
+    margin: 0px;
+    font-size: medium;
+}
+
+.parent{
+    margin: 10px 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-box{
+    margin-right: 20px;
+    display: flex;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid 1px gray;
+    justify-content: center;
+    padding: auto 0px;
+    background-color: transparent;
+}
+
+span{
+    display: none;
+    visibility: hidden;
+}
+.check-box:hover span{
+    display: block;
+    visibility: visible;
+}
+.check-box:focus span{
+    display: block;
+    visibility: visible;
+}

@@ -18,6 +18,8 @@ function CreateTodo(){
             onClick={(e)=>{
                 if(title.value == null || description.value == null ) return; 
                 addTodo(title.value, description.value);
+                title.value="";
+                description.value="";
                 }
             }>Add Todo</button>
             
